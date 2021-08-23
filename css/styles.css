@@ -457,6 +457,7 @@ ul {
   letter-spacing: 0.06em;
   border-radius: 4px;
   padding: 10px 32px;
+  border: 0;
 }
 .button.primary {
   color: var(--white-bgc-text-color);
