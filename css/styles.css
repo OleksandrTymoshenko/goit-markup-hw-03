@@ -13,6 +13,8 @@
 /*герой и подвал background: #2F303A; */
 /*чем мы занимаемся background: #E5E5E5; */
 /*наша команда background: #F5F4FA; */
+/* 
+ <!-- <a class="link-portfolio" href="#"> --> */
 
 :root {
   --primary-text-color: #757575;
@@ -23,6 +25,7 @@
   --hero-footer-bgc: #2f303a;
   --secondary-bgc: #f5f4fa;
   --footer-phone-mail-text: rgba(255, 255, 255, 0.6);
+  --card-set-gap: 30px;
 }
 
 /* The main parameters of styling and utilits */
@@ -190,6 +193,7 @@ ul {
   display: flex;
   margin-left: auto;
 }
+
 /* Main page content */
 /* Banner Hero */
 
@@ -242,22 +246,26 @@ ul {
 
 /* Features WebStudio */
 
-.features-item {
-  margin-right: 30px;
+.features {
   padding-top: 94px;
 }
 
-.text-item {
-  font-style: 400;
-  font-size: 14px;
-  line-height: 1.71;
+.section-title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
 }
 
 .features-list {
   display: flex;
 }
+
+.features-item {
+  margin-right: 30px;
+}
+
 .list-title {
   margin-right: 30px;
   margin-bottom: 10px;
@@ -274,12 +282,12 @@ ul {
   margin-right: 0;
 }
 
-.section-title {
-  color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
+.text-item {
+  font-style: 400;
+  font-size: 14px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
 /* Products */
@@ -409,6 +417,12 @@ ul {
 }
 
 /* Footer contacts */
+
+.footer-address {
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
 .address {
   color: var(--white-bgc-text-color);
   background-color: var(--hero-footer-bgc);
@@ -418,10 +432,28 @@ ul {
   letter-spacing: 0.03em;
   text-decoration: none;
   font-style: normal;
-  margin-top: 20px;
+  margin-bottom: 9px;
 }
 
-.footer-mail,
+.footer-email {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.footer-phone {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.footer-mail {
+  color: var(--footer-phone-mail);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
 .footer-tel {
   color: var(--footer-phone-mail);
   font-weight: 400;
@@ -429,7 +461,7 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
-  margin-top: 9px;
+  margin-top: 80px;
 }
 
 .footer-mail:hover,
@@ -490,33 +522,46 @@ ul {
 
 /* Portfolio main content */
 
-.portfolio {
+.card-container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 94px;
+  margin: 0 auto;
 }
 
-.portfolio-list.card-set {
+/* Card-set */
+
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 94px;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
-.item-portfolio {
-  flex-basis: calc((100% - 90) / 3);
-  box-sizing: border-box;
-  border: 1px solid #eeeeee;
+.card-set > .item-portfolio {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
-.link-portfolio {
-  text-decoration: none;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.portfolio-title {
+.card-content {
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  padding: 20px, 24px, 20px, 24px;
+}
+
+.card-heading {
   color: var(--title-text-color);
   font-family: Roboto;
   font-style: normal;
@@ -530,7 +575,7 @@ ul {
   padding-left: 24px;
 }
 
-.portfolio-item {
+.card-text {
   color: var(--primary-text-color);
   text-align: start;
   padding-top: 4px;
