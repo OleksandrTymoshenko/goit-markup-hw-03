@@ -482,7 +482,6 @@ ul {
 
 .filter-container {
   justify-content: center;
-  padding-bottom: 34px;
 }
 
 .button {
@@ -516,17 +515,20 @@ ul {
 
 .group-item {
   display: flex;
-  margin-top: 94px;
   margin-left: 6px;
 }
 
 /* Portfolio main content */
 
+.portfolio {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
 .card-container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 94px;
   margin: 0 auto;
 }
 
