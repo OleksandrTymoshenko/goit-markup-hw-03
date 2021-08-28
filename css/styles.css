@@ -34,6 +34,7 @@ body {
   background-color: var(--white-bgc-text-ciolor);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
 }
 
 p,
@@ -77,6 +78,19 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+.section-title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Logo */
@@ -131,7 +145,7 @@ ul {
 }
 
 .header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .header .container {
@@ -250,14 +264,6 @@ ul {
   padding-top: 94px;
 }
 
-.section-title {
-  color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
 .features-list {
   display: flex;
 }
@@ -297,14 +303,6 @@ ul {
   padding-bottom: 94px;
 }
 
-.products-title {
-  color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
 .products-list {
   display: flex;
   margin-top: 50px;
@@ -339,14 +337,6 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
   background: var(--secondary-bgc);
-}
-
-.team-title {
-  color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .team-list {
@@ -394,18 +384,8 @@ ul {
   padding-bottom: 56px;
 }
 
-.footer-container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-
 .footer-logo {
   display: flex;
-}
-
-.footer-logo {
   color: var(--white-bgc-text-color);
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -418,11 +398,6 @@ ul {
 
 /* Footer contacts */
 
-.footer-address {
-  margin-top: 20px;
-  margin-bottom: 9px;
-}
-
 .address {
   color: var(--white-bgc-text-color);
   background-color: var(--hero-footer-bgc);
@@ -432,21 +407,23 @@ ul {
   letter-spacing: 0.03em;
   text-decoration: none;
   font-style: normal;
-  margin-bottom: 9px;
+  margin-top: 20px;
 }
 
-.footer-email {
+.footer-list {
   margin-top: 9px;
-  margin-bottom: 9px;
 }
 
-.footer-phone {
-  margin-top: 9px;
-  margin-bottom: 9px;
+.mail-footer {
+  padding-bottom: 9px;
+}
+
+.tel-footer {
+  padding-bottom: 9px;
 }
 
 .footer-mail {
-  color: var(--footer-phone-mail);
+  color: var(--footer-phone-mail-text);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -455,13 +432,12 @@ ul {
 }
 
 .footer-tel {
-  color: var(--footer-phone-mail);
+  color: var(--footer-phone-mail-text);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
+  /* letter-spacing: 0.03em; */
   text-decoration: none;
-  margin-top: 80px;
 }
 
 .footer-mail:hover,
@@ -479,10 +455,6 @@ ul {
 /* Portfolio page content */
 
 /* Buttons portfolio filter */
-
-.filter-container {
-  justify-content: center;
-}
 
 .button {
   color: var(--title-text-color);
@@ -521,11 +493,12 @@ ul {
 /* Portfolio main content */
 
 .portfolio {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .card-container {
+  justify-content: center;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -560,7 +533,7 @@ img {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
-  padding: 20px, 24px, 20px, 24px;
+  padding: 20px 24px 20px 24px;
 }
 
 .card-heading {
@@ -572,16 +545,10 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   text-align: start;
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-left: 24px;
 }
 
 .card-text {
   color: var(--primary-text-color);
   text-align: start;
-  padding-top: 4px;
-  padding-right: 24px;
-  padding-left: 24px;
-  padding-bottom: 20px;
+  margin-top: 4px;
 }
